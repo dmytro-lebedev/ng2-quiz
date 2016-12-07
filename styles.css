@@ -1,0 +1,37 @@
+h2, input, label {
+    display: block;
+    margin-bottom: 20px;
+    padding: 10px;
+    font-size: 16px;
+    color: #444;
+    border: none;
+}
+input[type="radio"] {
+    display: inline-block;
+}
+button {
+    display: block;
+    margin-top: 20px;
+    padding: 10px 0;
+    width: 100%;
+    font-size: 16px;
+    background: #848;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+}
+form {
+    display: inline-block;
+    margin: 80px auto 0;
+    padding: 40px;
+    background: #eee;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+}
+* {
+    font-family: Arial;
+    font-size: 14px;
+}

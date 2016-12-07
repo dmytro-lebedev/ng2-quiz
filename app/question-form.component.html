@@ -1,0 +1,17 @@
+<h2>
+  {{question.text}}
+</h2>
+
+<form *ngIf="questionAnswers" (ngSubmit)="onSubmit()" #questionForm="ngForm">
+  <label *ngFor="let questionAnswer of questionAnswers">
+    <input type="radio" name="answer" [value]="questionAnswer.id" required [(ngModel)]="questionAnswerId">
+    {{questionAnswer.text}}
+  </label>
+
+  <button type="submit" [disabled]="!questionForm.form.valid || !questionAnswerId || submitted">Continue</button>
+</form>
+
+<div *ngIf="failed">
+  <p>Failed loading question answers.</p>
+  <button (click)="onRetry()">Retry</button>
+</div>

@@ -1,0 +1,6 @@
+<question-form *ngIf="question" [question]="question" (answer)="onAnswer($event)"></question-form>
+
+<div *ngIf="failed">
+    <p>Failed transferring data.</p>
+    <button (click)="onRetry()">Retry</button>
+</div>

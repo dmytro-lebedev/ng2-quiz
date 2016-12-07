@@ -1,0 +1,11 @@
+<nav *ngIf="!getSessionUser()">
+    <a routerLink="/login" routerLinkActive="active">Login</a>
+    <a routerLink="/register" routerLinkActive="active">Register</a>
+</nav>
+
+<nav *ngIf="getSessionUser()">
+    <span>Hi, {{getSessionUser().email}}</span>
+    <a routerLink="/logout" routerLinkActive="active">Logout</a>
+</nav>
+
+<router-outlet></router-outlet>

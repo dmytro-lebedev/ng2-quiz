@@ -1,0 +1,8 @@
+<h2>You scored {{score | percent}}</h2>
+
+<question-result *ngFor="let userAnswer of userAnswers" [userAnswer]="userAnswer"></question-result>
+
+<div *ngIf="failed">
+  <p>Failed loading results.</p>
+  <button (click)="onRetry()">Retry</button>
+</div>

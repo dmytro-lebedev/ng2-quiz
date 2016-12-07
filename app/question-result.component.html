@@ -1,0 +1,21 @@
+<h2 *ngIf="question">{{question.text}}</h2>
+
+<div *ngIf="questionAnswer && correctQuestionAnswer && questionAnswer.id === correctQuestionAnswer.id"
+     class="alert alert-success">
+    <p>Correct!</p>
+    <p>{{correctQuestionAnswer.text}}</p>
+</div>
+
+<div *ngIf="questionAnswer && correctQuestionAnswer && questionAnswer.id !== correctQuestionAnswer.id"
+     class="alert alert-success">
+    <p>You answered incorrect.</p>
+    <p>{{questionAnswer.text}}</p>
+
+    <p>Correct answer:</p>
+    <p>{{correctQuestionAnswer.text}}</p>
+</div>
+
+<div *ngIf="failed">
+    <p>Failed loading data.</p>
+    <button (click)="onRetry()">Retry</button>
+</div>

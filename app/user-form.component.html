@@ -1,0 +1,6 @@
+<form (ngSubmit)="onSubmit();" #userForm="ngForm">
+  <input name="email" type="email" placeholder="Email" required [(ngModel)]="user.email">
+  <input name="password" type="password" placeholder="Password" required [(ngModel)]="user.password">
+
+  <button type="submit" [disabled]="!userForm.form.valid || submitted">{{getSubmitText()}}</button>
+</form>
